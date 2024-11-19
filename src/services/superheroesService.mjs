@@ -23,7 +23,12 @@ export async function modificarSuperheroe(id, datosActualizados) {
     return await superHeroRepository.modificarSuperheroe(id, datosActualizados);
 }
 
-//Servicio para eliminar un superhéroe
+//Servicio para eliminar un superhéroe por Id
 export async function eliminarSuperheroe(id) {
     return await superHeroRepository.eliminarSuperheroe(id);
+}
+
+//Servicio para eliminar un superhéroe por nombre
+export async function eliminarSuperheroePorNombre(nombre) {
+    return await superHeroRepository.eliminarSuperheroePorNombre(nombre);
 }
