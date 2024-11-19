@@ -7,10 +7,14 @@ import {
     buscarSuperheroesPorAtributo, 
     obtenerSuperheroesMayoresDe30, 
     modificarSuperheroe, 
-    eliminarSuperheroe 
+    eliminarSuperheroe,
+    eliminarSuperheroePorNombre
 } from '../services/superheroesService.mjs';
 import { renderizarSuperheroe, renderizarListaSuperheroes } from '../views/responseView.mjs';
 import SuperHero from '../models/SuperHero.mjs';
+import {body, validationResult} from 'express-validator'; //Importamos express-validator
+
+
 
 //Controlador para obtener un superhéroe por ID
 export async function obtenerSuperheroePorIdController(req, res) {
@@ -54,6 +58,49 @@ export async function obtenerSuperheroesMayoresDe30Controller(req, res) {
 
 //Controlador para agregar un superhéroe
 export async function agregarSuperheroeController(req, res) {
+    // try {
+    //     const nuevoSuperheroe = new SuperHero(req.body);
+    //     await nuevoSuperheroe.save();
+    //     res.status(201).send({ mensaje: "Superhéroe agregado exitosamente", superheroe: nuevoSuperheroe });
+    // } catch (error) {
+    //     res.status(500).send({ mensaje: "Error al agregar superhéroe", error });
+    // }
+
+    //Validación de los datos del cuerpo de la solicitud
+    await body('nombreSuperHeroe')
+        .trim()
+        .notEmpty().withMessage('El nombre del superhéroe es requerido')
+        .isLength({ min: 3, max: 60 }).withMessage('El nombre del superhéroe debe tener entre 3 y 60 caracteres')
+        .run(req);
+
+    await body('nombreReal')
+        .trim()
+        .notEmpty().withMessage('El nombre real es requerido')
+        .isLength({ min: 3, max: 60 }).withMessage('El nombre real debe tener entre 3 y 60 caracteres')
+        .run(req);
+
+    await body('edad')
+        .trim()
+        .notEmpty().withMessage('La edad es requerida')
+        .isNumeric().withMessage('La edad debe ser un número')
+        .custom(value => value >= 0).withMessage('La edad no puede ser negativa')
+        .run(req);
+
+    await body('poderes')
+        .isArray({ min: 1 }).withMessage('Debe haber al menos un poder')
+        .custom((poderes) => {
+            return poderes.every(poder => {
+                return typeof poder === 'string' && poder.trim().length >= 3 && poder.trim().length <= 60;
+            });
+        }).withMessage('Cada poder debe tener entre 3 y 60 caracteres')
+        .run(req);
+
+    //Comprobar si hay errores de validación
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errores: errors.array() });
+    }
+
     try {
         const nuevoSuperheroe = new SuperHero(req.body);
         await nuevoSuperheroe.save();
