@@ -1,5 +1,3 @@
-//CONFIGURA LA APLICACION EXPRESS Y LOS MIDDLEWARE
-
 import express from 'express';
 import {connectDB} from './config/dbConfig.mjs';
 import superHeroRoutes from './routes/superHeroRoutes.mjs';
@@ -12,6 +10,11 @@ app.use(express.json());
 
 //Conexión a MongoDB
 connectDB();
+
+app.set('views', './views'); // Define el directorio raíz de las vistas
+app.set('view engine', 'ejs'); // Usa EJS como motor de vistas
+// Middleware para parsear los datos de los formularios
+app.use(express.urlencoded({ extended: true }));  // Para formularios con método POST
 
 //Configuración de rutas
 app.use('/api', superHeroRoutes);

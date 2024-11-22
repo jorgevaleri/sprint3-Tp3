@@ -1,0 +1,112 @@
+[
+  {
+    nombreSuperHeroe: Spider-Man,
+    nombreReal: Peter Parker,
+    edad: 25,
+    planetaOrigen: Tierra,
+    debilidad: Altos niveles de estrés emocional,
+    poderes: [Sentido arácnido, Fuerza mejorada, Lanzar telarañas, Trepar paredes],
+    aliados: [Iron Man, Doctor Strange, Black Widow],
+    enemigos: [Green Goblin, Venom, Doctor Octopus],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: Iron Man,
+    nombreReal: Tony Stark,
+    edad: 45,
+    planetaOrigen: Tierra,
+    debilidad: Dependencia de su tecnología,
+    poderes: [Trajes de alta tecnología, Vuelo, Armas avanzadas],
+    aliados: [War Machine, Pepper Potts, Captain America],
+    enemigos: [Mandarín, Ultron, Thanos],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: Thor,
+    nombreReal: Thor Odinson,
+    edad: 1500,
+    planetaOrigen: Asgard,
+    debilidad: Dependencia de Mjölnir,
+    poderes: [Fuerza divina, Control del trueno, Vuelo con Mjölnir],
+    aliados: [Loki, Hulk, Valkyrie],
+    enemigos: [Hela, Surtur, Laufey],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: Hulk,
+    nombreReal: Bruce Banner,
+    edad: 40,
+    planetaOrigen: Tierra,
+    debilidad: Falta de control como Hulk,
+    poderes: [Fuerza ilimitada, Regeneración rápida, Resistencia mejorada],
+    aliados: [Black Widow, Thor, Hawkeye],
+    enemigos: [Abomination, Leader, Thunderbolt Ross],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: Superman,
+    nombreReal: Clark Kent,
+    edad: 35,
+    planetaOrigen: Krypton,
+    debilidad: Kryptonita,
+    poderes: [Vuelo, Fuerza sobrehumana, Visión láser, Aliento helado],
+    aliados: [Batman, Wonder Woman, The Flash],
+    enemigos: [Lex Luthor, Doomsday, Brainiac],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: Batman,
+    nombreReal: Bruce Wayne,
+    edad: 38,
+    planetaOrigen: Tierra,
+    debilidad: Es humano,
+    poderes: [Intelecto estratégico, Artes marciales, Uso de tecnología avanzada],
+    aliados: [Robin, Alfred, Wonder Woman],
+    enemigos: [Joker, Two-Face, Riddler],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: Wonder Woman,
+    nombreReal: Diana Prince,
+    edad: 1000,
+    planetaOrigen: Themyscira,
+    debilidad: Compasión excesiva,
+    poderes: [Fuerza divina, Vuelo, Lazo de la Verdad, Brazaletes mágicos],
+    aliados: [Superman, Batman, Aquaman],
+    enemigos: [Ares, Cheetah, Dr. Poison],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: The Flash,
+    nombreReal: Barry Allen,
+    edad: 30,
+    planetaOrigen: Tierra,
+    debilidad: Altas demandas de energía,
+    poderes: [Supervelocidad, Viaje en el tiempo, Vibración molecular],
+    aliados: [Iris West, Superman, Green Lantern],
+    enemigos: [Reverse-Flash, Captain Cold, Gorilla Grodd],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: Captain Marvel,
+    nombreReal: Carol Danvers,
+    edad: 35,
+    planetaOrigen: Tierra,
+    debilidad: Confianza excesiva,
+    poderes: [Absorción de energía, Vuelo, Fuerza sobrehumana],
+    aliados: [Nick Fury, Spider-Man, Thor],
+    enemigos: [Yon-Rogg, Ronan el Acusador, Supreme Intelligence],
+    nombrePersonaCargo: Jorge Valeri
+  },
+  {
+    nombreSuperHeroe: Green Lantern,
+    nombreReal: Hal Jordan,
+    edad: 32,
+    planetaOrigen: Tierra,
+    debilidad: Dependencia del anillo de poder,
+    poderes: [Creación de objetos con el anillo, Vuelo, Proyección de energía],
+    aliados: [The Flash, Batman, Wonder Woman],
+    enemigos: [Sinestro, Parallax, Black Hand],
+    nombrePersonaCargo: Jorge Valeri
+  }
+]

@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+}
+
+#searchBar {
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button.edit-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button.agregar-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4CAF50; /* Un verde brillante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+button.agregar-btn:hover {
+    background-color: #45a049; /* Un verde más oscuro */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Más sombra al pasar el ratón */
+}
+
+button.agregar-btn:active {
+    transform: scale(1); /* Vuelve al tamaño original al hacer clic */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los nombres de los superhéroes */
+.hero-name {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Letras de color claro */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}

@@ -1,21 +1,18 @@
 //Interfaz para definir métodos base que deben implementarse en repositorios
 
-class IRepository {
-    obtenerPorId(id) {
-        throw new Error("Método 'obtenerPorId()' no implementado");
+class IRepository{
+    obtenerPorId(id){
+        throw new Error("Metodo 'obtenerPorId(id)' no implementado")
     }
-
-    obtenerTodos() {
-        throw new Error("Método 'obtenerTodos()' no implementado");
+    obtenerTodos(){
+        throw new Error("Metodo 'obtenerTodos()' no implementado")
     }
-
-    buscarPorAtributo(atributo, valor) {
-        throw new Error("Método 'buscarPorAtributo()' no implementado");
+    buscarPorAtributo(atributo, valor){
+        throw new Error("Metodo 'obtenerPorAtributo(atributo, valor)' no implementado")
     }
-
-    obtenerMayoresDe30() {
-        throw new Error("Método 'obtenerMayoresDe30()' no implementado");
+    obtenerMayoresDe30(){
+        throw new Error("Metodo 'obtenerMayoresDe30()' no implementado")
     }
 }
 
-export default IRepository;
+export default IRepository;//exporto la clase

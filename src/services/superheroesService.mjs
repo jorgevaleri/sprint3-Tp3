@@ -18,9 +18,21 @@ export async function obtenerSuperheroesMayoresDe30() {
     return await superHeroRepository.obtenerMayoresDe30();
 }
 
+//Servicio para agregar Superhéroes
+export async function agregarHeroe(datosHeroe) {
+    return await superHeroRepository.agregarDB({
+        ...datosHeroe,
+        fechaCreacion: new Date(), // Ejemplo de lógica adicional
+    });
+}
+
 //Servicio para modificar un superhéroe
 export async function modificarSuperheroe(id, datosActualizados) {
-    return await superHeroRepository.modificarSuperheroe(id, datosActualizados);
+    return await superHeroRepository.modificarSuperheroe(id, {
+        ...datosActualizados,
+        ultimaActualizacion: new Date(), // Lógica adicional
+        }
+    );
 }
 
 //Servicio para eliminar un superhéroe por Id
